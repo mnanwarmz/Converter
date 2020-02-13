@@ -36,8 +36,8 @@ public class Length extends JFrame implements ActionListener{
         //Panel 2 Content
         p2.add(label1);
         p2.add(valueBeforeConversion);
-        p2.add(calculate);
         p2.add(result);
+        p2.add(calculate);
         
         //Background Colour
         p1.setBackground(new Color(25, 181, 254));
@@ -75,6 +75,10 @@ public class Length extends JFrame implements ActionListener{
                 if(e.getSource() == calculate){
                     valueAfterConvert = Double.parseDouble(valueBeforeConversion.getText()) * valueMultiplier; 
                 }        
+                if(e.getSource() == length){
+                    length.setVisible(true);// nama frame yg user nak panggil
+                    Main.setVisible(false);// nama menu ko
+                }
             }
         }
     }
