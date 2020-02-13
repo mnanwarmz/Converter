@@ -1,4 +1,4 @@
-//Nabil 
+//Nabil
 
 //Edit valueBeforeConversion,result,TITLE,convertList
 package Converter;
