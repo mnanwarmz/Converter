@@ -7,6 +7,6 @@ import java.awt.Color; //to use color
 import java.awt.event.*; // activate the action
 
 
-public class Temperature {
+public class Temperature extends JFrame {
     
 }

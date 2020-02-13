@@ -6,6 +6,6 @@ import java.awt.BorderLayout; // Windows layout
 import java.awt.Color; //to use color 
 import java.awt.event.*; // activate the action
 
-public class Mass {
+public class Mass extends JFrame {
     
 }
