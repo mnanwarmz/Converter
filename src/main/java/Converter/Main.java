@@ -34,6 +34,7 @@ public class Main extends JFrame implements ActionListener{
         water.setPreferredSize(new Dimension(100, 30));
         
         p1 = new JPanel();
+        p1.setBackground(new Color(25, 181, 254));
         p1.add(lb1);
         
         p2 = new JPanel();
@@ -55,9 +56,11 @@ public class Main extends JFrame implements ActionListener{
         
     }
     
-     public void actionPerformed(ActionEvent e){
-            if(e.getSource()== length)
-                new Length().setVisible(true); 
+     @Override public void actionPerformed(ActionEvent e){
+            if(e.getSource()== length){
+                new Length().setVisible(true);
+            }
+
             if(e.getSource() == temp)
                 new Temperature().setVisible(true);
             if(e.getSource() == mass)
