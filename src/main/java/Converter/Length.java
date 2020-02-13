@@ -75,10 +75,6 @@ public class Length extends JFrame implements ActionListener{
                 if(e.getSource() == calculate){
                     valueAfterConvert = Double.parseDouble(valueBeforeConversion.getText()) * valueMultiplier; 
                 }        
-                if(e.getSource() == length){
-                    length.setVisible(true);// nama frame yg user nak panggil
-                    Main.setVisible(false);// nama menu ko
-                }
             }
         }
     }

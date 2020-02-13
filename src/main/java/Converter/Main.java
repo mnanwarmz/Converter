@@ -57,13 +57,14 @@ public class Main extends JFrame implements ActionListener{
     
      public void actionPerformed(ActionEvent e){
             if(e.getSource()== length)
-                new Length().setVisible(true);              
+                new Length().setVisible(true); 
             if(e.getSource() == temp)
                 new Temperature().setVisible(true);
             if(e.getSource() == mass)
                 new Mass().setVisible(true);
             if(e.getSource() == water)   
                 new Water().setVisible(true);
+            this.dispose();
         }
     
 }
