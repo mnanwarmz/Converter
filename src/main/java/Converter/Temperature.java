@@ -1,14 +1,12 @@
-/*
- * To change this license header, choose License Headers in Project Properties.
- * To change this template file, choose Tools | Templates
- * and open the template in the editor.
- */
+//MirulMax
 package Converter;
 
-/**
- *
- * @author Naim Zaid
- */
+import javax.swing.*; //JFrame included
+import java.awt.BorderLayout; // Windows layout
+import java.awt.Color; //to use color 
+import java.awt.event.*; // activate the action
+
+
 public class Temperature {
     
 }
