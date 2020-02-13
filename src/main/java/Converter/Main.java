@@ -57,17 +57,22 @@ public class Main extends JFrame implements ActionListener{
     }
     
      @Override public void actionPerformed(ActionEvent e){
-            if(e.getSource()== length){
-                new Length().setVisible(true);
-            }
-
+            if(e.getSource()== length)
+                createFrame(new Length(),"Length Converter");
             if(e.getSource() == temp)
-                new Temperature().setVisible(true);
+                createFrame(new Temperature(),"Temperature Converter");
             if(e.getSource() == mass)
-                new Mass().setVisible(true);
-            if(e.getSource() == water)   
-                new Water().setVisible(true);
+                createFrame(new Mass(),"Mass Converter");
+            if(e.getSource() == water)
+                createFrame(new Water(),"Water Converter");
             this.dispose();
         }
+     private void createFrame(JFrame obj,String title){
+         obj.setSize(500,250);
+         obj.setTitle(title);
+         obj.setVisible(true);
+         obj.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
+     }
+
     
 }
