@@ -1,6 +1,7 @@
 package Converter;
 
 import javax.swing.*;
+import javax.swing.border.EmptyBorder;
 import java.awt.BorderLayout;
 import java.awt.Color;
 import java.awt.event.*;
@@ -60,7 +61,17 @@ public class Main extends JFrame implements ActionListener{
             if(e.getSource()== length)
                 createFrame(new Length(),"Length Converter");
             if(e.getSource() == temp)
-                createFrame(new Temperature(),"Temperature Converter");
+//                createFrame(new Temperature(),"Temperature Converter");
+            {
+                // Set the look and feel.
+                try {
+                    UIManager.setLookAndFeel(UIManager
+                            .getCrossPlatformLookAndFeelClassName());
+                } catch (Exception ex) {
+                }
+
+                Temperature converter = new Temperature();
+            }
             if(e.getSource() == mass)
                 createFrame(new Mass(),"Mass Converter");
             if(e.getSource() == water)
@@ -68,11 +79,13 @@ public class Main extends JFrame implements ActionListener{
             this.dispose();
         }
      private void createFrame(JFrame obj,String title){
-         obj.setSize(500,250);
+         JPanel contentPane;
+
+         obj.setSize(500,600);
          obj.setTitle(title);
          obj.setVisible(true);
-         obj.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
      }
+
 
     
 }
