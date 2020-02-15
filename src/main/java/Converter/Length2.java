@@ -1,3 +1,5 @@
+////For Reference Use
+//
 //package Converter;
 //
 //import java.awt.BorderLayout;
@@ -20,21 +22,19 @@
 //    private String type0,type1,type2,type3,type4;
 //
 //    private JPanel contentPane;
-//    private JTextField mg;
-//    private JTextField g;
-//    private JTextField kg;
-//    private JTextField t;
-//    private JTextField tfMsg;
+//    private JTextField mg;//mg
+//    private JTextField g;//g
+//    private JTextField kg;//kg
+//    private JTextField t;//t
+//    private JTextField tfMsg;//tfMsg
 //
 //    public static void main(String[] args) {
-//        EventQueue.invokeLater(new Runnable() {
-//            public void run() {
-//                try {
-//                    Length frame = new Length();
-//                    frame.setVisible(true);
-//                } catch (Exception e) {
-//                    e.printStackTrace();
-//                }
+//        EventQueue.invokeLater(() -> {
+//            try {
+//                Length2 frame = new Length2();
+//                frame.setVisible(true);
+//            } catch (Exception e) {
+//                e.printStackTrace();
 //            }
 //        });
 //    }
@@ -64,12 +64,12 @@
 //        button.setBounds(12, 499, 162, 41);
 //        contentPane.add(button);
 //
-//        JLabel lblLengthConversion = new JLabel("Width Conversion");
-//        lblLengthConversion.setHorizontalAlignment(SwingConstants.CENTER);
-//        lblLengthConversion.setForeground(Color.WHITE);
-//        lblLengthConversion.setFont(new Font("Tahoma", Font.PLAIN, 30));
-//        lblLengthConversion.setBounds(12, 13, 458, 54);
-//        contentPane.add(lblLengthConversion);
+//        JLabel lblLength2Conversion = new JLabel("Width Conversion");
+//        lblLength2Conversion.setHorizontalAlignment(SwingConstants.CENTER);
+//        lblLength2Conversion.setForeground(Color.WHITE);
+//        lblLength2Conversion.setFont(new Font("Tahoma", Font.PLAIN, 30));
+//        lblLength2Conversion.setBounds(12, 13, 458, 54);
+//        contentPane.add(lblLength2Conversion);
 //
 //        JButton button_1 = new JButton("Exit");
 //        button_1.addActionListener(new ActionListener() {

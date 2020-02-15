@@ -7,6 +7,7 @@ import java.awt.Color;
 import java.awt.event.*;
 import java.awt.*;
 import java.awt.Font;
+import java.io.IOException;
 
 public class Main extends JFrame implements ActionListener{
     private JLabel lb1, lb2;
@@ -61,17 +62,7 @@ public class Main extends JFrame implements ActionListener{
             if(e.getSource()== length)
                 createFrame(new Length(),"Length Converter");
             if(e.getSource() == temp)
-//                createFrame(new Temperature(),"Temperature Converter");
-            {
-                // Set the look and feel.
-                try {
-                    UIManager.setLookAndFeel(UIManager
-                            .getCrossPlatformLookAndFeelClassName());
-                } catch (Exception ex) {
-                }
-
-                Temperature converter = new Temperature();
-            }
+                createFrame(new Temperature(),"Temperature Converter");
             if(e.getSource() == mass)
                 createFrame(new Mass(),"Mass Converter");
             if(e.getSource() == water)
