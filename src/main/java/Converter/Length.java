@@ -1,6 +1,6 @@
 //Nabil
 
-//Edit valueBeforeConversion,result,TITLE,convertList
+//Edit TITLE,convertList, convertRateToOther
 package Converter;
 
 import javax.swing.JFrame;
@@ -17,12 +17,15 @@ import java.io.InputStream;
 import javax.swing.JTextField;
 
 public class Length extends JFrame {
+//  Edit TITLE accordingly
     private final String TITLE = "Length Converter";
+//  Edit convertList[] according to type
     private final String[] convertList = {"CM", "M", "KM","Miles"};
     private JTextField tfMsg,value0,value1,value2,value3;
     private JLabel title = new JLabel(TITLE), result;
     private JPanel contentPane = new JPanel();
 
+//    Edit Values in here
     private void convertRateToOther(){
         String s1 = "",s2 = "", s3 = "";
         if(value0.getText().isEmpty() && value1.getText().isEmpty() && value2.getText().isEmpty() && value3.getText().isEmpty())
