@@ -13,7 +13,7 @@ public class Length extends JFrame {
     //  Edit TITLE accordingly
     private final String TITLE = "Length Converter";
     //  Edit convertList[] according to type
-    private final String[] convertList = {"CM", "M", "KM", "Miles"};
+    private final String[] convertList = {"CM", "Meters", "Kilometers", "Miles"};
     private JTextField tfMsg, value0, value1, value2, value3;
     private JLabel title = new JLabel(TITLE), result;
     private JPanel contentPane = new JPanel();
@@ -64,7 +64,7 @@ public class Length extends JFrame {
         button.addActionListener(e -> {
             Main home = new Main();
             home.setVisible(true);
-            home.setSize(500, 600);
+            home.setSize(600, 400);
             Length.this.dispose();
         });
 
@@ -88,9 +88,11 @@ public class Length extends JFrame {
             value1.setText(null);
             value2.setText(null);
             value3.setText(null);
+            tfMsg.setText("Enter value to only one field");
         });
 
 //      Exit Button
+//                Timer timer = new Timer(300, this.dispose());
         JButton button_1 = new JButton("Exit");
         button_1.setForeground(Color.WHITE);
         button_1.setFont(new Font("Verdana", Font.PLAIN, 20));
@@ -99,7 +101,18 @@ public class Length extends JFrame {
         button_1.addActionListener(new ActionListener() {
             @Override
             public void actionPerformed(ActionEvent e) {
-                Length.this.dispose();
+                JFrame exitFrame = new JFrame();
+                JDialog onExit = new JDialog(exitFrame,"Exiting...");
+                JLabel thx = new JLabel("<html> &nbsp Thanks for using our app!");
+                exitFrame.setBackground(new Color(22, 160, 133));
+                thx.setForeground(Color.WHITE);
+                thx.setFont(new Font("Verdana", Font.BOLD, 20));
+                onExit.getContentPane().setBackground(new Color(22, 160, 133));
+                onExit.add(thx);
+                onExit.setSize(340,200);
+                onExit.setVisible(true);
+                dispose();
+
             }
         });
         contentPane.add(button_1);

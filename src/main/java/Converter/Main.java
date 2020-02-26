@@ -9,20 +9,27 @@ public class Main extends JFrame implements ActionListener {
     private JLabel lb1;
     private JPanel p1, p2;
     private JButton length, temp, mass, water;
+    ImageIcon img [] = {
+        new ImageIcon(getClass().getClassLoader().getResource("lengthC.png")),
+        new ImageIcon(getClass().getClassLoader().getResource("temp.png")),
+        new ImageIcon(getClass().getClassLoader().getResource("weight.png")),
+        new ImageIcon(getClass().getClassLoader().getResource("waterC.png"))
+    };
 
     public Main() {
+        setTitle("Unit Calculator");
         lb1 = new JLabel("<html>Welcome to unit calculator!<br/> &nbsp &nbsp &nbsp Choose a Converter", JLabel.CENTER);
         lb1.setForeground(Color.WHITE);
-
         lb1.setFont(new Font("Verdana", Font.BOLD, 20));
-        length = new JButton("LENGTH");
-        length.setPreferredSize(new Dimension(100, 30));
-        temp = new JButton("TEMPERATURE");
-        temp.setPreferredSize(new Dimension(150, 30));
-        mass = new JButton("MASS");
-        mass.setPreferredSize(new Dimension(100, 30));
-        water = new JButton("WATER");
-        water.setPreferredSize(new Dimension(100, 30));
+        length = new JButton("LENGTH", img[0]);
+        length.setPreferredSize(new Dimension(130, 100));
+        temp = new JButton("TEMPERATURE", img[1]);
+        temp.setPreferredSize(new Dimension(160, 100));
+        mass = new JButton("MASS", img[2]);
+        mass.setPreferredSize(new Dimension(120, 100));
+        water = new JButton("WATER", img[3]);
+        water.setPreferredSize(new Dimension(120, 100));        
+
 
         length.setBackground(new Color(22, 160, 133));
         temp.setBackground(new Color(22, 160, 133));
@@ -50,6 +57,8 @@ public class Main extends JFrame implements ActionListener {
         setLayout(new BorderLayout());
         add(p1, BorderLayout.NORTH);
         add(p2, BorderLayout.CENTER);
+        p2.setLayout(new GridLayout(2,2));
+        
 
         length.addActionListener(this);
         temp.addActionListener(this);
@@ -61,7 +70,6 @@ public class Main extends JFrame implements ActionListener {
     public static void main(String[] args) {
         Main obj = new Main();
         obj.setSize(600, 400);
-        obj.setTitle("Unit Calculator");
         obj.setVisible(true);
         obj.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
     }
